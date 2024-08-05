@@ -1,0 +1,54 @@
+#include <iostream>
+#include <cmath> 
+using namespace std;
+
+int sumar(int a, int b) {
+    return a + b;
+}
+
+double potencia(int base, int exponente) {
+    return pow(base, exponente);
+}
+
+double area(double radio) {
+    return M_PI * radio * radio;
+}
+
+int main() {
+    int opcion;
+    int a, b;
+    double r;
+
+    cout << "1- Sumar Enteros" << endl;
+    cout << "2- Calcular area de Circulo" << endl;
+    cout << "3- Potencia de un Numero" << endl;
+    cin >> opcion;
+
+    switch (opcion) {
+        case 1:
+            cout << "Ingrese dos valores: ";
+            cin >> a >> b;
+            cout << "La suma de los dos valores es: " << sumar(a, b) << endl;
+            break;
+
+        case 2:
+            cout << "Ingrese el radio del circulo: ";
+            cin >> r;
+            cout << "El area del circulo es: " << area(r) << endl;
+            break;
+
+        case 3:
+            cout << "Ingrese la base: ";
+            cin >> a;
+            cout << "Ingrese el exponente: ";
+            cin >> b;
+            cout << "La potencia de la base elevada al exponente es: " << potencia(a, b) << endl;
+            break;
+
+        default:
+            cout << "Opcion no valida." << endl;
+            break;
+    }
+
+    return 0;
+}
