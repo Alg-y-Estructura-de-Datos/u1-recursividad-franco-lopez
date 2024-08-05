@@ -1,0 +1,22 @@
+#include <iostream> 
+using namespace std; 
+template <typename T> 
+void intercambiar(T &manzana, T &naranja){
+    T temp = manzana;
+    manzana = naranja;
+    naranja = temp;
+}
+int main (){
+    int manzana; 
+    int naranja;
+    cout << "Ingrese la cantidad para el jugo de manzana: "; 
+    cin >> manzana; 
+    cout << "Ingrese la cantidad para el jugo de naranja: "; 
+    cin >> naranja; 
+    cout << "La cantidad de jugo antes del intercambiar del vaso de manzana es: " << manzana<< endl;
+    cout << "La cantidad de jugo antes del intercambiar del vaso de naranja es: " << naranja<< endl;
+    cout << "DESPUES DEL INTERCAMBIO:" << endl; 
+    intercambiar(manzana, naranja); 
+    cout << "La cantidad de jugo antes del intercambiar del vaso de manzana es: " << manzana<< endl;
+    cout << "La cantidad de jugo antes del intercambiar del vaso de naranja es: " << naranja<< endl;
+}
