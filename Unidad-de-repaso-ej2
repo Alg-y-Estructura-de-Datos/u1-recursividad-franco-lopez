@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n = 5; 
+    int total = 1;
+
+    if (n == 0 || n == 1) {
+        total = 1;
+    } else {
+        for (int i = n; i >= 1; i--) {
+            total = i * total; 
+        }
+    }
+
+    cout << "El factorial de " << n << " es: " << total << endl;
+    return 0;
+}
