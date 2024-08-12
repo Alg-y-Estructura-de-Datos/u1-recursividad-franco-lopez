@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void posicion(string num, int n) {
+    if (n < 0) {
+        return;
+    } else {
+        cout << num[n];
+        posicion(num, n - 1);
+    }
+}
+
+int main() {
+    string num;
+    cout << "Ingrese el numero: ";
+    cin >> num;
+    int n = num.size() - 1; 
+    posicion(num, n);
+    cout << endl; 
+    return 0;
+}
