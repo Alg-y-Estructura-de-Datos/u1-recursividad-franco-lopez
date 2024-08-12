@@ -1,0 +1,27 @@
+#include <iostream> 
+using namespace std; 
+bool encontrar(string num, int d, int n){
+    if (n < 0){
+        return false; 
+    }
+    if (num[n] == d){
+        return true; 
+    }else{
+        return encontrar(num, d, n-1);
+    }
+}
+int main(){
+    string num; 
+    int d; 
+    cout << "Ingrese un numero: "; 
+    cin >> num; 
+    cout << "Ingrese  el numero para determinar si esta en la cadena"; 
+    cin >> d; 
+    int n = num.size() - 1; 
+    if (encontrar(num, d, n)){
+        cout << "El numero esta en la cadena: "; 
+    }else{
+        cout << "El numero no esta en la cadena"; 
+    }
+
+}
